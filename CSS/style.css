@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,8 +11,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #dad6d6;
-  padding: 0 20px;
+  background-color: #0e0e47;
+  padding: 0 30px;
 }
 
 .logo img {
@@ -34,13 +34,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
+  color: #fff;
   font-weight: 500;
-  color: rgb(69, 69, 161);
 }
 
 nav ul li a:hover {
-  color: #15637a;
+  color: #ccc;
 }
 
 /* Hero Section */
@@ -59,15 +59,20 @@ nav ul li a:hover {
   padding: 40px 20px;
 }
 
+.hero-content {
+  margin: 0 180px;
+}
+
 .hero-content h3 {
   color: #fff;
-  font-size: 32px;
-  margin: 0;
+  font-size: 48px;
+  margin-bottom: 8px;
 }
 
 .hero-content p {
   color: #fff;
   font-size: 20px;
+  line-height: 1.6;
 }
 
 /* About Section */
@@ -82,11 +87,13 @@ nav ul li a:hover {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  color: rgb(69, 69, 161);
+  color: #0e0e47;
+  margin-bottom: 40px;
 }
 
 .about-content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -101,4 +108,196 @@ nav ul li a:hover {
 
 .about-content img {
   flex: 1;
+}
+
+/* Service Section */
+
+.service-section {
+  padding: 40px 40px;
+  background-color: #0e0e47;
+}
+
+.service-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.service-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto 0;
+}
+
+.service-card h3 {
+  color: #0e0e47;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.service-card a {
+  display: inline-block;
+  color: #fff;
+  background-color: #0e0e47;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 40px 20px;
+  background-color: #f3f3f3;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #0e0e47;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-content iframe {
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+}
+
+.contact-content form {
+  flex: 1;
+  max-width: 500px;
+  background-color: #0e0e47;
+  padding: 25px 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-content h1 {
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  margin: 10px;
+  font-style: italic;
+}
+
+.contact-content form label {
+  display: block;
+  font-size: 30px 40px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.contact-content form input,
+.contact-content form textarea {
+  width: 100%;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-content button {
+  background-color: #fff;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 24px;
+  color: #0e0e47;
+  border-radius: 10px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.contact-content button:hover {
+  background-color: #7e8c9c;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+/*Footer Section*/
+
+.footer-section {
+  padding: 20px 40px;
+  color: #fff;
+  background-color: #1e1e1e;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* .footer-logo {
+  flex: 1;
+  margin-right: 20px;
+} */
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.footer-links {
+  margin: 0 20px;
+}
+
+.footer-links h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
 }
