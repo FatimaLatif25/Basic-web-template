@@ -833,6 +833,68 @@ nav ul li a:hover {
 
 /* service page */
 
+/* Service Page CSS */
+/* Hero service section */
+.hero-service-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url("../Images/hero-service.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+}
+
+.hero-service-content {
+  margin: 0 40px;
+}
+
+.hero-service-content h3 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero-service-content p{
+  font-size: 20px;
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .hero-service-section {
+    padding: 30px 15px;
+  }
+
+  .hero-service-content h3 {
+    font-size: 24px;
+  }
+
+  .hero-service-content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-service-section {
+    padding: 20px 10px;
+  }
+
+  .hero-service-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-service-content p  {
+    font-size: 14px;
+  }
+}
+
+/* service main */
+
 .our-service-section {
   margin: 40px 20px;
   padding: 20px 40px;
@@ -865,6 +927,9 @@ nav ul li a:hover {
   border-radius: 5px;
   text-align: center;
   padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation-name: service-cards;
+  animation-duration: 3s;
 }
 
 .service-box img {
@@ -902,3 +967,11 @@ nav ul li a:hover {
   transform: scale(1.03);
 }
 
+@keyframes service-cards {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: rgb(96, 133, 150);
+  }
+}
