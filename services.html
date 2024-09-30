@@ -1,9 +1,154 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>About Page</title>
+    <title>Service Page</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
-    <h1>Here is my services page</h1>
+    <!--header Section-->
+    <header class="header">
+      <div class="logo">
+        <a href="/">
+          <img src="Images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </label>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+      <!--Hero About Section-->
+      <section class="hero-service-section">
+        <div class="hero-service-content">
+          <h3>Services</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard.
+          </p>
+        </div>
+      </section>
+
+    <!--Our Services Section-->
+    <section class="our-service-section">
+      <div class="services-text">
+        <h2>Our Services</h2>
+        <p>
+          We combine industry-leading expertise with innovative technology to
+          deliver top-notch solutions tailored to your business needs.
+        </p>
+      </div>
+
+      <div class="service-container">
+        <div class="service-box">
+          <img src="Images/html5.png" alt="html5" />
+          <h3>HTML5</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="service-box">
+          <img src="Images/css.png" alt="CSS3" />
+          <h3>CSS3</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="service-box">
+          <img src="Images/javascript.png" alt="javascript" />
+          <h3>JavaScript</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="service-box">
+          <img src="Images/rails.jpeg" alt="rails" />
+          <h3>Ruby on Rails</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="service-box">
+          <img src="Images/react.png" alt="react" />
+          <h3>React js</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="service-box">
+          <img src="Images/python.png" alt="python" />
+          <h3>Python</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+     <!--Footer Section-->
+    <section class="footer-section">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a><img src="Images/logo.png" alt="logo" /></a>
+          <p>Lorem Ipsum, Dolor Sit Amet Consectetur All Rights Reserved</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Pricing</h4>
+          <ul>
+            <li><a href="/about">Overview</a></li>
+            <li><a href="/services">Premium Plan</a></li>
+            <li><a href="/contact">Affliate Program</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Social Links</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://pk.linkedin.com/>Linkedin">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
