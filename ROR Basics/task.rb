@@ -81,15 +81,45 @@ end
 # Create a Library class that can store multiple Book objects and has
 # methods to add and list books.
 
+
+#create module
+class BookAlreadyBorrowError < StandardError; end
+module Borrowable
+
+    def borrow_books
+        if @borrowed
+
+            #raise the custom exception error
+            raise  BookAlreadyBorrowError, "This book is already borrowed"
+        else 
+            @borrowed = true
+            puts "You have successfully borrowed the book"
+        end
+    end
+
+    def return_books
+        if @borrowed
+            @borrowed = false
+             puts "You have successfully returned the book"
+       else 
+             puts "This book was not borrowed"
+       end
+    end
+end
+
 class Book
+include Borrowable
+
     def initialize (title, author, pages)
         @title = title
         @author = author
         @pages = pages
+        @borrowed = false
     end
 
     def book_details
         puts "The #{@title} is a book of #{author} with #{pages} pages"
+        puts @borrowed ? "Status: Borrowed" : "Status: Available"
     end
 
     #make public methods allow access anywhere in class
@@ -129,9 +159,25 @@ my_library.add_books(book1)
 my_library.add_books(book2)
 my_library.add_books(book3)
 my_library.book_list
+
+#Try to add custom exception error
+begin
+    book1.borrow_books
+    book1.borrow_books   #Give exception if we borrow again
+rescue BookAlreadyBorrowError => e
+    puts "#{e.message}"
+end
+
+
+book1.return_books
+book1.book_details
+book1.return_books
+
+
+
 # book1.pages  not accessble because it private
 
-class DigitalBook < Book
+class DigitalBook < Book   #not need to add module beacuse it already inherited
 
     def initialize(title, author, pages, file_name)
         super(title, author, pages)
@@ -152,3 +198,5 @@ end
 
 my_digital_book = DigitalBook.new("Peer-e-Kamil", "Umera Ahmed", 1300, "novel.pdf")
 my_digital_book.book_details
+my_digital_book.borrow_books
+my_digital_book.return_books

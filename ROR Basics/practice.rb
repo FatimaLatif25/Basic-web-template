@@ -313,3 +313,13 @@ my_car.start_engine
 my_car.stop_engine
 # my_car.seceret_code
 my_car.honk_horn
+
+
+#Error Handling example
+begin
+    result = 10/0
+    puts "Result is #{result}"
+
+rescue ZeroDivisionError => e
+    puts "Error: Division by 0 is not allowed #{e.message} "
+end
