@@ -256,7 +256,7 @@ square_each_element (num) {
 
 
 #enumerable map methods
- numbers = [1,2,3,4]
+ nnumbers = [1,2,3,4]
  square = numbers.map { |n| n * n  }
  puts square
 
@@ -322,4 +322,124 @@ begin
 
 rescue ZeroDivisionError => e
     puts "Error: Division by 0 is not allowed #{e.message} "
+end
+
+# puts "Hey" if blank?
+
+puts "Enter Your Name?"
+name = gets.chomp()
+puts ("Hello " + name + ", You are cool")
+
+# game
+puts "Enter the color"
+color = gets.chomp
+puts "Enter plural noun"
+plural_noun = gets.chomp
+puts "Enter the celebrity"
+celebrity = gets.chomp
+
+puts ("Roses are "+ color)
+puts (plural_noun +" are blue")
+puts ("I love "+ celebrity)
+
+# switch
+def day_of_week(day)
+    case day
+    when "Monday"
+      "Start of the work week!"
+    when "Friday"
+      "Almost the weekend!"
+    when "Saturday", "Sunday"
+      "It's the weekend!"
+    else
+      "Just another day."
+    end
+  end
+  
+  puts day_of_week("Monday")   # Output: Start of the work week!
+  puts day_of_week("Friday")   # Output: Almost the weekend!
+  puts day_of_week("Wednesday") # Output: Just another day.
+  puts day_of_week("Sunday")   # Output: It's the weekend!
+
+  #How we access private methods in another classs using ruby
+  #using send keyword
+   class FirstClass
+    attr_accessor :private_method
+    puli method
+
+    private
+
+    def private_method
+        puts "This is my private method"
+    end
+   end
+
+   class SecondClass
+
+      def another_method
+        first = FirstClass.new()
+        first.send(:private_method)
+      end
+   end
+
+   second = SecondClass.new()
+   puts second.another_method
+
+
+#Custom Error Handling
+#1. Define custom error
+#2. raise the custon error
+#3. RESCUE THE error gracefully using begin and rescue
+
+#Example of ATM in which we handle the custom exception error
+#The withdraw amount exceeds the account balance (InsufficientFundsError)
+#The entered amount is zero or negative (InvalidAmountError)
+#IN ruby, Error throw usig raise keyword
+
+
+class InsufficientFundsError < StandardError
+    def initialize (msg = "Insufficient Funds in your account")
+     super(msg) #pass msg to the super class standard error
+    end
+end
+
+class InvalidAmountError < StandardError
+    def initialize (msg = "Invalid amount: please enter positive number")
+        super(msg)
+       end
+end
+
+class Atm
+    
+
+    def initialize (balance)
+        @balance = balance
+    end 
+
+    def withdraw (amount)
+        raise InvalidAmountError if amount <= 0
+        raise InsufficientFundsError if amount > @balance 
+        @balance -= amount
+        puts "Succesfully widthdraw $#{amount}. New Balance is $#{@balance}"
+
+    end
+
+end
+
+begin
+atm = Atm.new(500)
+atm.withdraw(100)
+atm.withdraw(600)
+rescue InsufficientFundsError => e
+    puts "Error: #{e.message}"
+rescue InvalidAmountError => e
+    puts "Error: #{e.message}"
+end
+
+begin
+  atm.withdraw(-50)
+rescue InsufficientFundsError => e
+    puts "Error: #{e.message}"
+rescue InvalidAmountError => e
+    puts "ERror: #{e.message}"
 end
